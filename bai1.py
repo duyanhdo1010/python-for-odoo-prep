@@ -1,4 +1,9 @@
-input = [{"id": 1, "name": "Laptop", "price": 1000, "quantity": 5}, {"id": 2, "name": "Mouse", "price": 20, "quantity": 50}]
+import ast
+
+# Sample input: [{"id": 1, "name": "Laptop", "price": 1000, "quantity": 5}, {"id": 2, "name": "Mouse", "price": 20, "quantity": 50}]
+input = input("Nhập data input: ")
+
+converted_input = ast.literal_eval(input)
 
 def calculate_inventory_value(products):
     total_value = 0
@@ -16,5 +21,5 @@ def most_expensive_product(products):
             most_expensive_product = product
     return f"{most_expensive_product['name']} ({max_value})"
 
-print("Tổng giá trị kho:", calculate_inventory_value(input))
-print("Sản phẩm giá trị cao nhất:", most_expensive_product(input))
+print("Tổng giá trị kho:", calculate_inventory_value(converted_input))
+print("Sản phẩm giá trị cao nhất:", most_expensive_product(converted_input))

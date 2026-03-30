@@ -1,6 +1,6 @@
 users = {}
 
-print("--- Chương trình quản lý user ---")
+print("-- Chương trình quản lý user --")
 print("1: Lấy thông tin theo id")
 print("2: Thêm thông tin người dùng")
 print("3: Sửa thông tin user bằng id")
